@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>历史搜索记录</title>
+    <style>
+        #family{
+            position: absolute;
+            padding-left: 200px;
+            padding-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="search" autofocus="autofocus" placeholder="请输入想查找的商品" id="search" name="search1" autocomplete="off"/>
+        <button id="button1">
+            搜索
+        </button>
+        <br/>
+        <div id="family">
+            <button id="button2" style="color:black;background-color: gray;">x</button>
+            <br>
+        </div>
+        <p>最近搜索</p>
+    </form>
+</body>
+<script>
+     window.onload=function(){
+        var button1 = document.getElementById('button1');
+        var storage = window.localStorage;
+        var family = document.getElementById('family');
+        button1.onclick=function(){
+            var time = new Date();
+            var now = time.toTimeString();
+            var search = document.getElementById('search').value;
+            storage.setItem(now,search);
+        }
+        for(var i = 0;i<storage.length;i++){
+                var key = storage.key(i);
+                var data = storage.getItem(key);
+                var button = document.createElement("button");
+                button.innerHTML = data;
+                family.appendChild(button);
+
+        }
+        var button2 = document.getElementById('button2');
+        button2.onclick = function(){
+            if(window.confirm("是否清除历史:")){
+                storage.clear();
+                while(family.lastChild){
+                    family.removeChild(family.lastChild);
+                }
+            }   
+        }
+    }
+    </script>
+</html>
