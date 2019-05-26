@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    #large{
+        width: 360px;
+        height: 460px;
+        background: rgb(221, 221, 221) ;
+    }
+  #box1{
+      width: 350px;
+      height: 450px;
+      padding: 0px;
+      margin: 5px 5px;
+
+  }
+  #box2{
+      width: 350px;
+      height: 320px;
+      margin: 0px;
+      padding: 0px;
+  }
+  #p1{
+    width: 350px;
+    height: 320px;
+  }
+  #box3{
+      position: absolute;
+      width: 350px;
+      height: 100px;
+      padding: 0px;
+      margin: 0px; 
+      top: 300px;}
+      
+  #box4{
+     background: rgb(255, 102, 0);
+     color: white;
+     font-size: 12px;
+     width: 40px;
+     height: 20px;
+     text-align: center;      }
+     #box5{
+      width: 350px;
+      height: 140px;
+      padding: 0px;
+      margin: 0px; 
+      background: white;}
+      #title1{
+          font-size:20px;
+          font-weight: bolder;
+          margin-left: 20px;
+      }
+      #title2{
+          font-size:16px;
+          color: rgb(255, 102, 0);
+          margin-left: 20px;
+          margin-top: 10px;
+      }
+      #word{
+          font-size: 14px;
+          color:  rgb(172, 170, 170) ;
+          margin-left: 20px;
+          height: 60px;
+          opacity: 0;
+      }
+      
+      #date{
+          width: 50px;
+          height: 50px;
+          border-radius: 25px;
+          position: absolute;
+          background:rgb(255, 102, 0);
+          top: 30px;
+          left: 300px;
+      }
+      #da{
+          color: white;
+          position: absolute;
+          top: 4px;
+          left:16px;
+          font-size: 14px;
+      }
+      #mo{
+          color: white;
+         position: absolute;
+         left: 11px;
+         top:22px;
+         font-size: 14px;
+      }
+      @keyframes myshadow{
+          0%{
+              opacity: 1;
+          }
+          50%{
+              opacity: 0.5
+          }
+          100%{
+              opacity: 0.45;
+          }
+      }
+
+      @keyframes mybig{
+          0%{
+            top:250px;
+          }
+          50%{
+            top:220px;
+          }
+          100%{
+            top:180px;
+          }
+      }
+      @keyframes myword{
+          0%{
+            opacity: 1;
+          }
+          50%{
+            opacity: 1;
+          }
+          100%{
+            opacity: 1;
+          }
+      }
+
+      #large:hover #box2{
+          animation: myshadow 3s linear;
+      }
+      #large :hover #box3{
+          animation: mybig 3s linear;
+          height: 250px;
+      }
+      #large :hover #box5{
+          
+          height: 250px;
+      }
+      #large:hover #word{
+         animation: myword 3s linear;
+         height: 210px;
+      }
+      #box8{
+        width: 330px;
+        font-size: 10px;
+        color: gray;
+        position: absolute;
+        top: 450px;
+        padding-left: 20px;
+        background: white;
+      }
+      
+     
+   
+</style>
+<body>
+    <div id="large">
+            <div id="box1">
+                    <div id="box2">
+                        <img id="p1" src="./zhanqiao.jpg">
+                    </div>
+                    <div id="date">
+                            <div id="da">15</div>
+                            <div id="mo">五月</div>
+                    </div>
+                    <div id="box3">
+                        <div id="box4">照片</div>
+
+                        <div id="box5">
+                            <div id="title1">青岛栈桥</div>
+                            <div id="title2">国家AAAA级旅游景区</div>
+                            <div id="word">青岛栈桥是青岛滨海风景区的景点之一，是国务院于1982年首批公布的国家级风景名胜区。
+                            青岛栈桥位于游人如织的青岛中山路南端，桥身从海岸探入如弯月般的青岛湾深处。
+                            桥身供游人参观并在此停靠旅游船，由此乘船可看海上青岛。</div>
+                          
+                        </div>
+                        
+                    </div>
+                    <div id="box8">10分钟前 &nbsp; &nbsp; &nbsp; &nbsp;123评论</div>
+                 </div>
+    </div>
+    
+</body>
+</html>
