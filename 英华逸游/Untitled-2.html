@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>模态框</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+    @media screen and (min-width: 768px) {
+      #container{
+	    width: 100%;
+        }
+        #one-box{
+      width: 100%;
+      height: 40px;
+      background-color: black;
+      margin-bottom: 0px;
+      position: relative;
+    }
+    .service{
+      position: relative;
+      left: 70%;
+      top: 15%;
+    }
+    .tell{
+      color: white;
+      position: relative;
+      left: 70.5%;
+      top: 20%;
+    }
+    #login{
+      color: white;
+      position: relative;
+      left: 73%;
+      top: 19%;
+    }
+    #register{
+      color: white;
+      position: relative;
+      left: 74%;
+      top: 19%;
+    }
+    #vertain{
+      color: white;
+      position: relative;
+      left: 73.5%;
+      top: 17%;
+    }
+    #logo{
+      padding-top: 15px;
+    }
+    #left{
+     position: relative;
+     top: 50%;
+     right: 40%;
+   }
+   #right{
+    position: relative;
+     top: 50%;
+     left: 40%;
+   }
+   #span1{
+     font-size: 36px;
+     color: #e0e0e0;
+   }
+   #span2{
+     color: #e0e0e0;
+     position: absolute;
+     top: 55%;
+     left: 13.5%;
+   }
+   #span3{
+     color: #e0e0e0;
+     position: absolute;
+     top: 70%;
+     left: 13.5%;
+   }
+   #hr1{
+    width:320px;
+    position: absolute;
+    height: 1px;
+    top: 35%;
+    left: 13.5%;
+   }
+   #hr2{
+    width:400px;
+    position: absolute;
+    top: 73%;
+    left: 13.5%;
+    height: 1px;
+   }
+ #extra{
+     width: 580px;
+     height: 170px;
+     position: absolute;
+     left: 10.5%;
+     top: 10%;}
+@media screen and (max-width: 768px) {
+    #container{
+	    width: 100%;
+        }
+        #one-box{
+     display: none;
+    }
+}
+</style>
+  </head>
+  <body data-spy="scroll">
+	<div class="container">
+            <div id="one-box">
+                    <img src="img/tell.png" class="service">
+                    <span class="tell">400-808-8682</span>
+                    <a href="#" id="login"><small>请登录</small></a>
+                    <small id="vertain">&#124</small>
+                    <a href="#" id="register"><small>注册</small></a>
+                  </div>
+            <div class="row">
+                <div class="col-sm-2 col-sm-offset-1 col-xs-2 col-xs-offset-1" id="logo">
+                    <img src="img/logo.png" class="img-responsive" />
+                </div>
+                <div class="col-sm-6 col-sm-offset-2 col-xs-6 col-xs-offset-2">
+                    <nav id="one-nav">
+                        <ul class="nav navbar-nav nav-pills" id="one-ul">
+                          <li class="active"><a href="#">首页</a></li>
+                          <li><a href="#hot-route">热门路线</a></li>
+                          <li><a href="#recommend">签证推荐</a></li>
+                          <li><a href="#fate">使命愿景</a></li>
+                        </ul>
+                      </nav>
+                </div>
+            </div>
+            <div id="circleplay" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="item active"><a><img src="img/banner.jpg" width="100%"></a>
+                  <div class="carousel-caption" id="extra"> 
+                      <div class="row"  ><div class="col-sm-10 col-sm-offset-2 "> <span id="span1">悠游古欧洲 &nbsp;  遍览德法瑞意  </span></div></div>
+                      <hr  id="hr1">
+                      <div class="row"  ><div class="col-sm-4 col-sm-offset-2 "> <span id="span2">巴黎卢浮宫、塞纳河游船、凡尔赛宫 </span></div></div>
+                      <div class="row"  ><div class="col-sm-6 col-sm-offset-2 "><span id="span3">少女峰、大运河游船、金色列车，西庸城堡</span></div></div>
+                      <hr  id="hr2">
+                    </div>
+                </div>
+                <div class="item"><a><img src="img/banner2.jpg" height="100%"></a></div>
+                  <a class="left carousel-control" href="#circleplay" data-slide="prev">
+                      <img src="img/left.png" id="left">
+                    </a>
+                    <a class="right carousel-control" href="#circleplay" data-slide="next">
+                      <img src="img/right.png" id="right">
+                    </a>
+              </div>
+            </div>
+                
+	</div>
+    <script src="js/jquery.js"></script>    
+    <script src="js/bootstrap.min.js"></script> 
+  </body>
+</html>
